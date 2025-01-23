@@ -1,0 +1,514 @@
+*{
+    margin :0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+#header, #about, #resume, #contact {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start; /* For snap scrolling */
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f9f9f9;
+    color: #080808;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 15px;
+}
+nav ul li a{
+    color:#080808;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position:relative;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: darkblue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+nav ul li a.active::after {
+    content: ''; /* Ensures the active state underline is displayed */
+    width: 100%; /* Full underline width for active state */
+    height: 3px;
+    background: darkblue; /* Active state underline color */
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.header-text{
+    text-align: center;
+    margin-top: -60px;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span {
+    color: darkblue; /* Default color */
+    display: inline-block; /* Necessary for smooth movement */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth animation for color and movement */
+}
+
+.header-text h1 span:hover {
+    color: crimson; /* Change to your desired hover color */
+    transform: translateY(-5px); /* Move up slightly */
+}
+
+
+
+/*----------------about--------------*/
+#about {
+    padding: 80px;
+    color: #080808;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between the sections */
+    max-width: 1200px; /* Restricts the width for better alignment */
+    margin: auto; /* Centers the row within the container */
+}
+
+.about-col-1 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center; /* Centers the image within the column */
+    align-items: center;
+}
+
+.about-col-1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the circle perfectly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow to the image */
+}
+
+.about-col-2 {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-basis: 60%;
+    padding: 20px; /* Adds spacing inside the box for better readability */
+    margin: 20px; /* Adds space around the "About Me" box */
+}
+
+.sub-title {
+    font-size: 150x;
+    font-weight: 400;
+    flex-shrink: 0;
+    color: black;
+    margin-bottom: 20px; 
+}
+/*-----------------Projects--------------------*/
+
+#projects {
+    padding: 60px 10%;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* Ensure positioning works for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove underline from anchor tag */
+    display: block; /* Ensure the whole card is clickable */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Less aggressive hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Project Info */
+.project-info {
+    padding: 20px;
+    text-align: left;
+    z-index: 1; /* Ensure it stays on top of any background */
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Ensure the anchor tag takes the whole card */
+.project-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Make anchor tag cover the whole card */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensure it is clickable */
+}
+
+
+/*-----------------Resume-------------*/
+#resume {
+    padding: 80px 0;
+    color: #080808;
+    text-align: center;
+}
+#resume h1{
+    margin-bottom: 20px;
+}
+
+#resume .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tab-titles {
+    display: flex;
+    justify-content: center; /* Center-align tabs horizontally */
+    gap: 30px; /* Add spacing between tabs */
+    margin-bottom: 20px;
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    position: relative; /* Enables pseudo-element positioning */
+    padding: 10px 20px; /* Add padding for better clickability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.tab-links::after {
+    content: ''; /* Adds the underline effect */
+    width: 0; /* Starts with no underline */
+    height: 3px; /* Underline thickness */
+    background: darkblue; /* Underline color */
+    position: absolute; /* Position relative to the tab */
+    left: 0; /* Starts from the left edge */
+    bottom: -6px; /* Positions the underline slightly below the text */
+    transition: 0.5s; 
+}
+
+.tab-links:hover::after {
+    width: 100%; /* Expands the underline on hover */
+}
+
+.tab-links.active::after {
+    content: ''; /* Ensures the active state underline is displayed */
+    width: 100%; /* Full underline width for active state */
+    height: 3px;
+    background: darkblue; /* Active state underline color */
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tab Contents Container */
+.tab-contents {
+    width: 100%; /* Increase the width */
+    margin: 20px auto; /* Add some margin for spacing */
+    padding: 40px; /* Increase padding for a spacious look */
+    min-height: 400px;
+    background-color: #ffffff; /* White background for clarity */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Slightly larger rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for emphasis */
+}
+
+
+
+/* Remove Default List Styling */
+.tab-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Align Category Name and Content */
+.tab-contents li {
+    display: flex; /* Flexbox for alignment */
+    align-items: flex-start; /* Align to the top of the content */
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555; /* Softer text color */
+}
+
+/* Category Name Styling */
+.tab-contents li span {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 200px; /* Fixed width for category names */
+    font-weight: 600; /* Bold category names */
+    color: #080808; /* Darker color for emphasis */
+    text-align: left;
+}
+
+/* Content Styling */
+.tab-contents li p {
+    margin: 0;
+    word-wrap: break-word; /* Wrap long words/content */
+}
+
+/*------------------Experience------------------------------*/
+
+/* Headings for Job Titles */
+.tab-contents h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Darker text for headings */
+    margin-bottom: 10px; /* Spacing below the title */
+}
+
+/* Location and Date Styling */
+.experience-location {
+    font-size: 16px;
+    color: #777; /* Subdued text for location and dates */
+    margin-bottom: 15px; /* Spacing below the location */
+    font-style: italic;
+}
+
+/* Bullet Point List */
+.experience-list {
+    list-style: disc; /* Standard bullet points */
+    margin-left: 20px; /* Indent the list for alignment */
+    padding-left: 20px;
+    color: #555; /* Softer text for bullet points */
+    line-height: 1.6; /* Increase spacing between lines */
+    text-align: justify; /* Align text properly */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+.experience-list li {
+    margin-bottom: 10px; /* Spacing between bullet points */
+    position: relative;
+}
+/*-----------------------Education-----------------*/
+/* Individual Education Items */
+.education-item {
+    margin-bottom: 20px; /* Space between education items */
+    line-height: 1.6; /* Better readability */
+    text-align: left;
+}
+
+/* Degree Title Styling */
+.education-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Darker text color for contrast */
+}
+
+/* Institution and Dates */
+.education-location {
+    font-size: 16px;
+    font-style: italic; /* Italicized for distinction */
+    color: #777; /* Softer gray color */
+    margin-bottom: 10px;
+}
+
+.education-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-location span {
+    margin-left: auto;
+    color: #333;
+}
+/*---------------------------certifications-------------*/
+/*-----remove the list styling-----------*/
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space evenly */
+    gap: 20px; /* Add space between items */
+    margin: 20px 0;
+}
+
+.certification-item {
+    width: calc(33.33% - 20px); /* Each item takes up 1/3 of the space */
+    text-align: center;
+    box-sizing: border-box; /* Prevents overflow */
+    max-width: 300px; /* Optional max-width to avoid overflow */
+}
+
+.certification-item img {
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensures the image fits within the container */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.certification-item p {
+    margin-top: 10px;
+}
+
+/*----------------------------contact-----------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: darkblue;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#777;
+    display:inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:darkblue;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    text-decoration: none;
+    display:inline-block;
+    margin-top:15px;
+    margin-bottom: 10px;
+    background-color:#080808;
+    color:#f9f9f9;
+}
+.btn.btn2 i{
+    margin-right:5px;
+}
+.contact-right{
+    width:100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline:none;
+    background: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+    color:#080808;
+    font-size:18px;
+    border-radius:6px;
+}
+form .btn2{
+    padding:14px 60px;
+    font-size: 18px;
+    margin-top:20px;
+    cursor:pointer;
+}
+.contact-right span{
+    color:green;
+    margin-top: -10px;
+    display: block;
+}
+

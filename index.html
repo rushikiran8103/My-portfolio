@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rushi Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+    </head>
+    <body>
+        <!--------------------------------------------------navbar-------------------------------------------->
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>
+                        Hello! I'm 
+                        <span class="name">
+                            <span>R</span><span>u</span><span>s</span><span>h</span><span>i</span><span>k</span><span>i</span><span>r</span><span>a</span><span>n</span>
+                            <span>G</span><span>u</span><span>r</span><span>i</span><span>j</span><span>a</span><span>l</span><span>a</span>
+                        </span>
+                    </h1>
+                    <p>A Passionate Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------about me------------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/rushi1.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>I’m a software developer who loves turning complex problems into elegant, user-friendly solutions. With expertise in Java, Spring Boot, ReactJS, and databases like MySQL, I’ve built everything from real-time chat apps to dynamic online marketplaces. Whether it’s crafting seamless user experiences or designing scalable backend systems, I’m driven by curiosity and a passion for innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!------------------------------------------------------Projects-------------------------------------->
+
+        <section id="projects">
+            <div class="container">
+                <h1 class="section-title">My Projects</h1>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <a href="https://github.com/rushikiran8103/ML-project" target="_blank"></a>
+                        <img src="images/project1.png" alt="ML Project">
+                        <div class="project-info">
+                            <h2>Sentiment Analysis</h2>
+                            <p>Sentiment analysis on social media reviews of political figures, utilizing text analysis and machine learning methods with Pandas, TextBlob, and Plotly to classify sentiment polarity and expressions</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <a href="https://github.com/rushikiran8103/Jeopardy_game_website" target="_blank"></a>
+                        <img src="images/project2.png" alt="Web Project">
+                        <div class="project-info">
+                            <h2>Gaming website</h2>
+                            <p>Created an interactive Jeopardy game website with HTML, CSS, and Python, offering a dynamic quiz experience</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <a href="https://github.com/rushikiran8103/Dbms_project" target="_blank"></a>
+                        <img src="images/project3.png" alt="Web Project">
+                        <div class="project-info">
+                            <h2>Biodata Website</h2>
+                            <p>Built a website to display detailed information about computer icons, using HTML, CSS, and JavaScript for an interactive user experience. Deployed it in GCP</p>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <a href="https://github.com/rushikiran8103/PredictUniv_rank" target="_blank"></a>
+                        <img src="images/project4.png" alt="DS Project">
+                        <div class="project-info">
+                            <h2>Prediction</h2>
+                            <p>Built a model to predict university rankings using machine learning algorithms like Linear Regression, Decision Tree, and Random Forest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
+
+        <!---------------------------------------------------------Resume--------------------------------------->
+        <div id="resume">
+            <div class="container">
+                <h1>Resume</h1>
+                <div class="tab-titles">
+                    <p class="tab-links" id="skills-tab" onclick="showTab('skills')">Skills</p>
+                    <p class="tab-links" id="experience-tab" onclick="showTab('experience')">Experience</p>
+                    <p class="tab-links" id="education-tab" onclick="showTab('education')">Education</p>
+                    <p class="tab-links" id="certifications-tab" onclick="showTab('certifications')">Certifications</p>
+                </div>
+                <!--------------------------skills---------------------------->
+                <div id="skills" class="tab-contents">
+                    <ul>
+                        <li><span>Programming languages</span>: Java, C and C++</li>
+                        <li><span>Tools</span>: Spring Boot, Spring MVC, Spring Cloud, Spring Data, Hibernate, JUnit</li>
+                        <li><span>Web Development</span>: HTML, CSS, JavaScript, PHP, ReactJs, Bootstrap</li>
+                        <li><span>Database Management</span>: MySQL, Mongo DB</li>
+                    </ul>
+                </div>
+                <!-----------------------Experience-------------------------->
+                <div id="experience" class="tab-contents">
+                    <!-- Systems Engineer -->
+                    <h3>Systems Engineer</h3>
+                    <p class="experience-location">Infosys, Hyderabad, India | Oct 2021 - July 2022</p>
+                    <ul class="experience-list">
+                        <li>Conducted detailed requirement analysis sessions to capture both functional and non-functional requirements.</li>
+                        <li>Designed robust and scalable PLSQL solutions tailored to client needs, ensuring system scalability.</li>
+                        <li>Developed complex PLSQL code, including stored procedures, functions, packages, and triggers, to implement business logic.</li>
+                    </ul>
+                
+                    <!-- Systems Engineer Trainee -->
+                    <h3>Systems Engineer Trainee</h3>
+                    <p class="experience-location">Infosys, Hyderabad, India | Jun 2021 - Sep 2021</p>
+                    <ul class="experience-list">
+                        <li>Developed back-end services with Spring Boot to handle business logic and data management.</li>
+                        <li>Utilized Angular to create a responsive, user-friendly application interface.</li>
+                        <li>Designed database schemas using SQL for efficient data storage and retrieval.</li>
+                    </ul>
+                </div>
+                <!-----------------------Education------------------------------->
+                <div id="education" class="tab-contents" id="education-tab">
+                    <div class="education-container">
+                        <div class="education-item">
+                            <h3>Master of Science in Computer Science</h3>
+                            <p class="education-location">Hood College, MD <span>Aug 2022 - May 2024</span></p>
+                        </div>
+        
+                        <div class="education-item">
+                            <h3>Bachelor of Technology in Information Technology</h3>
+                            <p class="education-location">SRM Institute of Science and Technology, India <span>Aug 2017 - May 2021</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------------certifications--------------------------->
+                <div id="certifications" class="tab-contents">
+                    <div class="certifications-container">
+                        <div class="certification-item">
+                            <a href="https://www.hackerrank.com/certificates/733228fb0521" target="_blank">
+                                <img src="images/angular_hr.png" alt="Certification 1">
+                            </a>
+                            <p>Angular</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://www.hackerrank.com/certificates/b4b5a9440b22" target="_blank">
+                                <img src="images/java_hr.png" alt="Certification 2">
+                            </a>
+                            <p>Java</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://www.hackerrank.com/certificates/af1cffb6c347" target="_blank">
+                                <img src="images/problem_hr.png" alt="Certification 3">
+                            </a>
+                            <p>Problem Solving</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://www.coursera.org/account/accomplishments/records/H9RE8VX3Y32E" target="_blank">
+                                <img src="images/web_coursera.png" alt="Certification 4">
+                            </a>
+                            <p>Web development</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL20CS26S1PC643631" target="_blank">
+                                <img src="images/dsa_nptel.png" alt="Certification 5">
+                            </a>
+                            <p>DSA(python)</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL19CS42S21182879191034932" target="_blank">
+                                <img src="images/c_nptel.png" alt="Certification 6">
+                            </a>
+                            <p>C language</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-----------------------------contact---------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa-solid fa-envelope"></i> rushikiran9999@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/rushikirangurijala/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/rushikiran8103"><i class="fab fa-github"></i></a>
+                        </div>
+                        <a href="images/Resume Rushi FS (1).docx" class="btn btn2"><i class="fa-solid fa-download"></i>Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------------------------Javascript------------------------------------>
+        <script src="resume.js"></script>
+        <script src="message.js"></script>
+        <script src="navbar.js"></script>
+    </body>
+</html>
